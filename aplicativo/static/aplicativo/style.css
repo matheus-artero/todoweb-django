@@ -1,12 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 html, body{
     margin: 0;
     height: 100%;
 
-    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-family:'Quicksand', sans-serif;
+    
+    background-color: #FFFAF1;
 }
 
-h1{
-    color: #304F4F;
+header{
+    padding: 24px 16px;
+    background-color: #1A3A3A;
+}
+
+main{
+    position: relative;
+    height: 100%;
+}
+
+label{
+    display: block;
+    padding-top: 8px;
+    margin-bottom: 8px;
+    
+    letter-spacing: 2px;
+    border-top: 1px solid #fff;
+}
+
+.font-title{
+    color: #fff;
+    font-size: 32px;
+    font-family:'Quicksand', sans-serif;
+    
+    letter-spacing: 4px;
+}
+
+.font-subtitle{
+    color: #fff;
+    font-size: 16px;
+    font-family:'Quicksand', sans-serif;
+    
+    letter-spacing: 2px;    
+}
+
+.header-subtitle{
+    padding: 10px;
+    vertical-align: super;
+}
+
+.wrapper{
+    position: absolute;
+    inset: 0;
+    
+    height: fit-content;
+    width: 450px;
+    margin: auto;
+    border-right: 2px solid #1A3A3A;
+    box-sizing: border-box;
+    
+    background-color: #1A3A3A;
+    box-shadow: -16px -16px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.list-title{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.list-subtitle{ 
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff;
+}
+
+.list-item{
+    display: block;
+    margin: 2px auto;
+    padding:16px 24px;
+    border: none;
+
+    transition: background .2s;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.list-item span{
+    display: inline-block;
+    max-width: 280px;
+    margin-left: 8px;
+    
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.list-item:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.list-item:hover .btn-icon{
+    opacity: 1;
+}
+
+input[type="checkbox"]{
+    margin: 0px 4px;
+    vertical-align: text-top;
+}
+
+input[type="checkbox"]:checked + span{
+    text-decoration: line-through;
+}
+
+.btn{
+    outline: none;
+    cursor: pointer;
+    
+    overflow: hidden;
+}
+
+.btn-default{
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    
+    color: #fff;
+    font-size: 16px;
+    
+    transition: background .5s;
+    background-color: #1A3A3A;
+}
+
+.btn-default:hover{
+    color: #1A3A3A;
+    border-color: #1A3A3A;
+    background-color: #fff;
+}
+
+.btn-icon{
+    float: right;
+    
+    height: 24px;
+    width: 24px;
+    margin: 0px 4px;
+    border: 1px solid #fff;
+    
+    color: #fff;
+    opacity: 0;
+    transition: opacity .2s;
+    background-color: transparent;
+}
+
+#list-header{
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#list-body{
+    height: 20vw;
+    overflow-y: auto;
+}
+
+#list-body::-webkit-scrollbar{
+    width: 4px;
+}
+
+#list-body::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+}
+
+#empty-list{
+    position: absolute;
+    inset: 0 0 0 0;
+    margin: auto;
+    
+    height: fit-content;
+    width: fit-content;
+    
+    font-style: italic;
+}
+
+#list-control{
+    height: fit-content;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    
+    text-align: center;
+}
+
+#input-item{
+    padding: 8px 16px;
+    padding-left: 4px;
+    
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    
+    outline: none;
+    border-radius: 0;
+    
+    color: #1A3A3A;
+    font-size: 16px;
+    font-family:'Quicksand', sans-serif;
 }
