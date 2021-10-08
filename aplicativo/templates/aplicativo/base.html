@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'aplicativo/style.css' %}">
+    <title>Todo List</title>
+</head>
+<body>
+    <header>
+        <span class="font-title">Todo List</span>
+        <span class="header-subtitle font-subtitle">Make it simple, one thing at a time</span>
+    </header>
+    <main>
+        <svg width="100%" height="100%">
+            <defs>
+                <pattern id="polka-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle fill="#1A3A3A" cx="8" cy="8" r="1" />
+                </pattern>
+            </defs>
+
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)" />
+        </svg>
+        <section class='wrapper'>
+            <article id="list-header">
+                <span id="list-name" class="list-title font-title">{% block list_name %}{% endblock%}</span>
+                <span id="list-desc" class="list-subtitle font-subtitle">{% block list_desc %}{% endblock%}</span>
+            </article>
+            <article id="list-body">
+                {% block list_item %}{% endblock%}
+            </article>
+            <form method="post" id="list-control">
+                <label for="text_todo" class="font-subtitle">Add something to do:</label>
+                <input id="input-item" name="text_todo" type="text" placeholder="something to do...">
+                <button id="btn-add"  class="btn btn-default">Add</button>
+                <button id="btn-clear" class="btn btn-default">Clear</button>
+            </form method="post">
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'aplicativo/script.js' %}"></script>
+</body>
+</html>
